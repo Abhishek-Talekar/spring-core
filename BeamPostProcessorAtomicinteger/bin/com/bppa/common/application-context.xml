@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="workers" class="com.bppa.beans.Workers">
+		<constructor-arg name="area_of_work"
+			value="Construction" />
+		<constructor-arg name="name" value="Mr.Thomas" />
+		<constructor-arg name="workRole" ref="workRole" />
+	</bean>
+
+	<bean id="workRole" class="com.bppa.beans.WorkRole">
+		<property name="work_category" value="Mansion" />
+		<property name="work_role" value="Team Member" />
+	</bean>
+	<!--  --><bean id="objectCounterPostProcessor"
+		class="com.bppa.beans.ObjectCounterBeanPostProcessor" />
+</beans>
