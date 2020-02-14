@@ -15,9 +15,9 @@ public class GetPremiumAmountReplacer implements MethodReplacer {
 			int age = (int) args[2];
 			String gender = (String) args[2];
 			int tenure = (int) args[2];
-			System.out.println("Policy name is: "+policyName+"Insured Amount is: Rs."+insuredAmount+"Age is: "+age);
+			System.out.println("Policy name is: "+policyName+"\nInsured Amount is: Rs."+insuredAmount+"\nAge is: "+age+"\nTenure is:"+tenure);
 			double amt = insuredAmount * tenure / 20;
-
+			
 			return amt;
 		}
 		return null;
